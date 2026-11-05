@@ -9,8 +9,26 @@
 <header class="site"><div class="wrap"><a class="brand" href="index.html"><img src="logo.jpg" alt="" width="56" height="56"><span>Benson Press</span></a>
 <nav aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="books.html">Books</a></li><li><a href="readalong.html">Read Along</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav></div></header><main id="main">
 <section><div class="wrap prose"><p class="eyebrow">Contact</p><h1>Get in touch</h1><hr class="rule">
-<p>For publishing, media, events, and rights inquiries, email:</p><p><a class="btn solid" href="mailto:sean@bensonpress.com">sean@bensonpress.com</a></p>
-<p style="color:var(--mute);font-size:.9rem">A contact form is pending and will be added in a future update.</p>
+<p id="thanks" class="thanks" hidden>Thank you. Your message is on its way to sean@bensonpress.com.</p>
+<p>For publishing, media, events, and rights inquiries, send a message. It is delivered to sean@bensonpress.com.</p>
+<form class="contact-form" action="https://formsubmit.co/sean@bensonpress.com" method="POST">
+<input type="hidden" name="_subject" value="Benson Press website contact">
+<input type="hidden" name="_next" value="https://bensonpress.com/contact.html?sent=1">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label for="name">Name<input id="name" name="name" type="text" required autocomplete="name"></label>
+<label for="email">Email<input id="email" name="email" type="email" required autocomplete="email"></label>
+<label for="subject">Subject<input id="subject" name="subject" type="text" required autocomplete="off"></label>
+<label for="message">Message<textarea id="message" name="message" required></textarea></label>
+<button class="btn solid" type="submit">Send message</button>
+</form>
+<p>Or email directly:</p><p><a class="btn" href="mailto:sean@bensonpress.com">sean@bensonpress.com</a></p>
 <p>Readers: news and the reader roster live at <a href="https://blackops-saga.com">blackops-saga.com</a>.</p></div></section></main>
+<script>
+if (new URLSearchParams(location.search).get("sent") === "1") {
+  var note = document.getElementById("thanks");
+  if (note) note.hidden = false;
+}
+</script>
 <footer><div class="wrap"><div><span class="serif" style="color:#fff;font-size:1.3rem;letter-spacing:.12em">BENSON PRESS</span><br>Independent publishing imprint</div>
 <div><a href="mailto:sean@bensonpress.com">sean@bensonpress.com</a><br><a href="https://blackops-saga.com">blackops-saga.com</a> · <a href="privacy.html">Privacy</a><br>&copy; 2026 Benson Press</div></div></footer></body></html>
