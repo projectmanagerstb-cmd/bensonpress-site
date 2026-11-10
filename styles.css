@@ -124,7 +124,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .nav-toggle .when-open{display:none}
 .shop-card > img{width:100%;height:auto}
 .kit-hero{align-items:start}
-.kit-teasers{margin-top:48px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px;margin:28px 0 0;padding:0;list-style:none}
 .gallery figure{margin:0}
 .gallery button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;font:inherit;color:inherit;text-align:left}
@@ -175,7 +174,7 @@ dialog.lightbox::backdrop{background:rgba(0,1,16,.82)}
   .saga-logo picture,.saga-logo img{max-width:200px}
   .featured-invite{padding:22px 20px}
   .readalong .excerpt{font-size:1.18rem}
-  .readalong-teaser,.signing-teaser,.toolkit-card,.kit-teasers{margin-top:32px}
+  .readalong-teaser,.signing-teaser,.toolkit-card{margin-top:32px}
   .event-flyer{max-width:100%}
   .partnership-break{display:block}
   .panel{padding:22px 20px 26px}
