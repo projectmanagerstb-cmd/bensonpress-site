@@ -111,7 +111,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .panel p{margin:.4em 0}
 .inquiry{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bp-muted);margin:.35em 0}
 .badge{display:inline-block;margin:0 0 12px;padding:4px 9px;border:1px solid var(--bp-accent-gold);color:var(--bp-accent-gold);background:transparent;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-.toolkit-card{max-width:640px;margin-top:48px}
 .service-card,.shop-card{display:flex;flex-direction:column;align-items:flex-start;height:100%}
 .service-card .btn,.shop-card .btn{margin-top:auto}
 .credentials{margin:.4em 0 0;max-width:46rem;color:var(--bp-text);font-size:1.02rem;line-height:1.55}
@@ -174,7 +173,7 @@ dialog.lightbox::backdrop{background:rgba(0,1,16,.82)}
   .saga-logo picture,.saga-logo img{max-width:200px}
   .featured-invite{padding:22px 20px}
   .readalong .excerpt{font-size:1.18rem}
-  .readalong-teaser,.signing-teaser,.toolkit-card{margin-top:32px}
+  .readalong-teaser,.signing-teaser{margin-top:32px}
   .event-flyer{max-width:100%}
   .partnership-break{display:block}
   .panel{padding:22px 20px 26px}
