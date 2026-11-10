@@ -15,7 +15,7 @@
 
   var topic = document.getElementById("topic");
   var subject = document.getElementById("form-subject");
-  if (!topic) return;
+  if (topic) {
 
   var aliases = {
     "publishing": "Publishing",
@@ -49,4 +49,50 @@
   applyTopic(params.get("topic"));
   topic.addEventListener("change", syncSubject);
   syncSubject();
+  }
+
+  var dialog = document.getElementById("lightbox");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  var items = Array.prototype.slice.call(document.querySelectorAll("[data-gallery-item]"));
+  if (!items.length) return;
+  var img = dialog.querySelector("img");
+  var cap = dialog.querySelector("figcaption");
+  var count = dialog.querySelector(".lightbox-count");
+  var index = 0;
+  var lastTrigger = null;
+
+  function show(i) {
+    index = (i + items.length) % items.length;
+    var item = items[index];
+    img.src = item.getAttribute("data-full");
+    img.alt = item.getAttribute("data-alt") || "";
+    cap.textContent = item.getAttribute("data-caption") || "";
+    count.textContent = (index + 1) + " of " + items.length;
+  }
+
+  items.forEach(function (item, i) {
+    item.addEventListener("click", function () {
+      lastTrigger = item;
+      show(i);
+      dialog.showModal();
+      var close = dialog.querySelector(".lightbox-close");
+      if (close) close.focus();
+    });
+  });
+
+  dialog.querySelector(".lightbox-close").addEventListener("click", function () {
+    dialog.close();
+  });
+  dialog.querySelector("[data-prev]").addEventListener("click", function () { show(index - 1); });
+  dialog.querySelector("[data-next]").addEventListener("click", function () { show(index + 1); });
+  dialog.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { e.preventDefault(); show(index + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); show(index - 1); }
+  });
+  dialog.addEventListener("click", function (e) {
+    if (e.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", function () {
+    if (lastTrigger) lastTrigger.focus();
+  });
 })();
