@@ -3,18 +3,10 @@
 
   // Display-only catalog. Checkout prices come from the worker, never from here.
   var CATALOG = {
-    "pmo-individual": { name: "PMO Setup Kit – Individual license", price: 89, physical: false },
-    "pmo-team": { name: "PMO Setup Kit – Team license (up to 10 users)", price: 249, physical: false },
-    "pmo-enterprise": { name: "PMO Setup Kit – Enterprise license", price: 599, physical: false },
-    "aig-individual": { name: "AI Governance for PMOs – Individual license", price: 199, physical: false },
-    "aig-team": { name: "AI Governance for PMOs – Team license (up to 10 users)", price: 399, physical: false },
-    "aig-enterprise": { name: "AI Governance for PMOs – Enterprise license", price: 799, physical: false },
     "slap-signed-paperback": { name: "BlackOPS:SLAP – Signed paperback", price: 40, physical: true },
     "slap-signed-hardcover": { name: "BlackOPS:SLAP – Signed hardcover", price: 52, physical: true },
     "pmo-book-signed-paperback": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed paperback", price: 30, physical: true },
-    "pmo-book-signed-hardcover": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed hardcover", price: 40, physical: true },
-    "invoice-payment": { name: "Invoice payment – Training, workshops & consulting", custom: true },
-    "pay-any-amount": { name: "Payment to Benson Press", custom: true }
+    "pmo-book-signed-hardcover": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed hardcover", price: 40, physical: true }
   };
 
   var STORAGE_KEY = "bp-cart-v1";
