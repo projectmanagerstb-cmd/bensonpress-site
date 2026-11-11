@@ -235,5 +235,3 @@ body.cart-open{overflow:hidden}
 }
 /* END cart styles */
 
-.moved-banner{background:var(--bp-surface);border-bottom:1px solid var(--bp-line);padding:16px 0}
-.moved-banner p{margin:0}

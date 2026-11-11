@@ -19,10 +19,6 @@
 
   var aliases = {
     "publishing": "Publishing",
-    "pm-consulting": "PM Consulting",
-    "pm": "PM Consulting",
-    "ai-governance": "AI Governance",
-    "training": "Training & Workshops",
     "speaking": "Speaking/Events",
     "media": "Media",
     "other": "Other"
