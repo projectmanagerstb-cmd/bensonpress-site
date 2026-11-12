@@ -4,17 +4,26 @@
   if (!root) return;
 
   var items = [
-    { name: "BLACK OPS Tagline Type Tee", price: "From $28", slug: "black-ops-tagline-type-tee" },
-    { name: "BLACK OPS Performance Quarter-Zip", price: "From $55", slug: "black-ops-performance-quarter-zip" },
-    { name: "BLACK OPS Performance Tee", price: "From $38", slug: "black-ops-performance-tee" },
-    { name: "BLACK OPS Mug", price: "From $20", slug: "black-ops-mug" },
-    { name: "BLACK OPS Embroidered Cap", price: "From $30", slug: "black-ops-embroidered-cap" },
-    { name: "BLACK OPS Saga Hoodie", price: "From $65", slug: "black-ops-saga-hoodie" },
-    { name: "LEGACY Book III Tee", price: "From $28", slug: "legacy-book-iii-tee" },
-    { name: "GHOST Book II Tee", price: "From $28", slug: "ghost-book-ii-tee" },
-    { name: "SLAP Book I Tee", price: "From $28", slug: "slap-book-i-tee" },
-    { name: "BLACK OPS Tagline Tee", price: "From $28", slug: "black-ops-tagline-tee" },
-    { name: "BLACK OPS Saga Logo Tee", price: "From $28", slug: "black-ops-saga-logo-tee" }
+    { name: "Flat Bill Cap", price: "From $26.85", slug: "flat-bill-cap" },
+    { name: "Stainless steel tumbler", price: "From $37.69", slug: "stainless-steel-tumbler" },
+    { name: "Black Glossy Mug", price: "From $19.80", slug: "black-glossy-mug-6aefc337a1aa3" },
+    { name: "Black Glossy Mug", price: "From $19.80", slug: "black-glossy-mug" },
+    { name: "Unisex Premium Sweatshirt", price: "From $36.50", slug: "unisex-premium-sweatshirt" },
+    { name: "Premium heavyweight long sleeve shirt", price: "From $36.00", slug: "premium-heavyweight-long-sleeve-shirt-6acd83057e9e7" },
+    { name: "This Too Is America", price: "From $48.00", slug: "premium-heavyweight-long-sleeve-shirt" },
+    { name: "Men’s Long Sleeve Shirt", price: "From $33.50", slug: "mens-long-sleeve-shirt" },
+    { name: "BlackOPS Clear Case for iPhone®", price: "From $20.00", slug: "blackops-clear-case-for-iphone" },
+    { name: "BLACK OPS Tagline Type Tee", price: "From $28.00", slug: "black-ops-tagline-type-tee" },
+    { name: "BLACK OPS Performance Quarter-Zip", price: "From $55.00", slug: "black-ops-performance-quarter-zip" },
+    { name: "BLACK OPS Performance Tee", price: "From $38.00", slug: "black-ops-performance-tee" },
+    { name: "BLACK OPS Mug", price: "From $20.00", slug: "black-ops-mug" },
+    { name: "BLACK OPS Embroidered Cap", price: "From $30.00", slug: "black-ops-embroidered-cap" },
+    { name: "BLACK OPS Saga Hoodie", price: "From $65.00", slug: "black-ops-saga-hoodie" },
+    { name: "LEGACY Book III Tee", price: "From $28.00", slug: "legacy-book-iii-tee" },
+    { name: "GHOST Book II Tee", price: "From $28.00", slug: "ghost-book-ii-tee" },
+    { name: "SLAP Book I Tee", price: "From $28.00", slug: "slap-book-i-tee" },
+    { name: "BLACK OPS Tagline Tee", price: "From $28.00", slug: "black-ops-tagline-tee" },
+    { name: "BLACK OPS Saga Logo Tee", price: "From $28.00", slug: "black-ops-saga-logo-tee" }
   ];
 
   var link = root.querySelector(".gear-link");
