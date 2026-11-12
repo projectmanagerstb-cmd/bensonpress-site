@@ -2,11 +2,14 @@
   "use strict";
 
   // Display-only catalog. Checkout prices come from the worker, never from here.
+  // Edit signed prices here. Any [data-sku-price="sku"] on the page is filled from this list.
   var CATALOG = {
-    "slap-signed-paperback": { name: "BlackOPS:SLAP – Signed paperback", price: 40, physical: true },
+    "slap-signed-paperback": { name: "BlackOPS:SLAP – Signed paperback", price: 35, physical: true },
     "slap-signed-hardcover": { name: "BlackOPS:SLAP – Signed hardcover", price: 52, physical: true },
-    "pmo-book-signed-paperback": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed paperback", price: 30, physical: true },
-    "pmo-book-signed-hardcover": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed hardcover", price: 40, physical: true }
+    "pmo-book-signed-paperback": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed paperback", price: 25.99, physical: true },
+    "pmo-book-signed-hardcover": { name: "Establishing A PMO: A Guidebook for Project Management Professionals – Signed hardcover", price: 34.99, physical: true },
+    "beautifully-me-signed-paperback": { name: "Beautifully Me: The Girl Beyond the Mirror – Signed paperback", price: 25, physical: true },
+    "boldly-me-signed-paperback": { name: "Boldly Me: The Boy Beyond the Mirror – Signed paperback", price: 25, physical: true }
   };
 
   var STORAGE_KEY = "bp-cart-v1";
@@ -362,7 +365,16 @@
     });
   }
 
+  function paintSkuPrices() {
+    document.querySelectorAll("[data-sku-price]").forEach(function (el) {
+      var product = CATALOG[el.getAttribute("data-sku-price")];
+      if (!product) return;
+      el.textContent = money(product.price);
+    });
+  }
+
   function renderAll() {
+    paintSkuPrices();
     renderBadges();
     document.querySelectorAll("[data-cart-list]").forEach(renderList);
   }

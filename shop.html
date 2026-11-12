@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shop | Benson Press</title>
-<meta name="description" content="Signed copies of BlackOPS:SLAP and Establishing A PMO. BlackOPS Gear is sold separately.">
+<meta name="description" content="Signed copies of Sean T. Benson's books. BlackOPS Gear is sold separately.">
 <link rel="canonical" href="https://bensonpress.com/shop.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Benson Press">
 <meta property="og:title" content="Shop | Benson Press">
-<meta property="og:description" content="Signed copies of BlackOPS:SLAP and Establishing A PMO. BlackOPS Gear is sold separately.">
+<meta property="og:description" content="Signed copies of Sean T. Benson's books. BlackOPS Gear is sold separately.">
 <meta property="og:url" content="https://bensonpress.com/shop.html">
 <meta property="og:image" content="https://bensonpress.com/og.jpg?v=20261110">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,6 +23,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261117">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "Signed books",
+  "itemListElement": [
+    { "@type": "Offer", "name": "BlackOPS:SLAP – Signed paperback", "sku": "slap-signed-paperback", "price": "35.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "BlackOPS:SLAP – Signed hardcover", "sku": "slap-signed-hardcover", "price": "52.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Establishing A PMO – Signed paperback", "sku": "pmo-book-signed-paperback", "price": "25.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Establishing A PMO – Signed hardcover", "sku": "pmo-book-signed-hardcover", "price": "34.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Beautifully Me: The Girl Beyond the Mirror – Signed paperback", "sku": "beautifully-me-signed-paperback", "price": "25.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Boldly Me: The Boy Beyond the Mirror – Signed paperback", "sku": "boldly-me-signed-paperback", "price": "25.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -36,12 +51,12 @@
 <p class="eyebrow">Shop</p>
 <h1>Shop</h1>
 <hr class="rule">
-<p class="prose">Signed copies of BlackOPS:SLAP and Establishing A PMO are sold here. BlackOPS Gear is sold in Sean T. Benson's shop.</p>
+<p class="prose">Signed copies of Sean T. Benson's books are sold here. Shipping is included in the price. BlackOPS Gear is sold in Sean T. Benson's shop.</p>
 </header>
 <div class="bento">
 <article class="tile shop-card book-card span-4">
 <img src="slap.jpg" alt="Cover of BlackOPS:SLAP" width="600" height="900">
-<p class="badge">$40</p>
+<p class="badge" data-sku-price="slap-signed-paperback"></p>
 <h2>BlackOPS:SLAP – Signed paperback</h2>
 <p>A signed paperback of Book 1, shipped to the address you enter at checkout. Shipping is included in the price.</p>
 <form class="cart-offer" data-cart-add data-sku="slap-signed-paperback">
@@ -50,7 +65,7 @@
 </article>
 <article class="tile shop-card book-card span-4">
 <img src="slap.jpg" alt="Cover of BlackOPS:SLAP" width="600" height="900">
-<p class="badge">$52</p>
+<p class="badge" data-sku-price="slap-signed-hardcover"></p>
 <h2>BlackOPS:SLAP – Signed hardcover</h2>
 <p>A signed hardcover of Book 1, shipped to the address you enter at checkout. Shipping is included in the price.</p>
 <form class="cart-offer" data-cart-add data-sku="slap-signed-hardcover">
@@ -59,16 +74,40 @@
 </article>
 <article class="tile shop-card book-card span-4" id="establishing-a-pmo">
 <img src="pmo.jpg" alt="Cover of Establishing A PMO: A Guidebook for Project Management Professionals" width="324" height="500">
-<p class="badge">From $30</p>
+<p class="badge">From <span data-sku-price="pmo-book-signed-paperback"></span></p>
 <h2>Establishing A PMO: A Guidebook for Project Management Professionals</h2>
 <p>A signed copy by Sean T. Benson, shipped to the address you enter at checkout. Shipping is included in the price. Paperback ISBN 9798895692653; hardcover ISBN 9798895693742.</p>
 <form class="cart-offer" data-cart-add>
 <fieldset>
 <legend>Choose a format</legend>
-<label class="license-option"><input type="radio" name="shop-pmo-book-sku" value="pmo-book-signed-paperback" checked> Signed paperback — <strong>$30</strong></label>
-<label class="license-option"><input type="radio" name="shop-pmo-book-sku" value="pmo-book-signed-hardcover"> Signed hardcover — <strong>$40</strong></label>
+<label class="license-option"><input type="radio" name="shop-pmo-book-sku" value="pmo-book-signed-paperback" checked> Signed paperback — <strong data-sku-price="pmo-book-signed-paperback"></strong></label>
+<label class="license-option"><input type="radio" name="shop-pmo-book-sku" value="pmo-book-signed-hardcover"> Signed hardcover — <strong data-sku-price="pmo-book-signed-hardcover"></strong></label>
 </fieldset>
 <div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button> <button type="button" class="btn" data-details="detail-pmo" aria-haspopup="dialog">View details</button></div>
+</form>
+</article>
+<article class="tile shop-card book-card span-4">
+<picture>
+<source srcset="beautifully-me.webp" type="image/webp">
+<img class="cover-natural" src="beautifully-me.jpg" alt="Cover of Beautifully Me: The Girl Beyond the Mirror" width="1000" height="1293">
+</picture>
+<p class="badge" data-sku-price="beautifully-me-signed-paperback"></p>
+<h2>Beautifully Me: The Girl Beyond the Mirror – Signed paperback</h2>
+<p>A signed paperback, shipped to the address you enter at checkout. Shipping is included in the price.</p>
+<form class="cart-offer" data-cart-add data-sku="beautifully-me-signed-paperback">
+<div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button> <button type="button" class="btn" data-details="detail-beautifully-me-signed" aria-haspopup="dialog">View details</button></div>
+</form>
+</article>
+<article class="tile shop-card book-card span-4">
+<picture>
+<source srcset="boldly-me.webp" type="image/webp">
+<img class="cover-natural" src="boldly-me.jpg" alt="Cover of Boldly Me: The Boy Beyond the Mirror" width="1000" height="1293">
+</picture>
+<p class="badge" data-sku-price="boldly-me-signed-paperback"></p>
+<h2>Boldly Me: The Boy Beyond the Mirror – Signed paperback</h2>
+<p>A signed paperback, shipped to the address you enter at checkout. Shipping is included in the price.</p>
+<form class="cart-offer" data-cart-add data-sku="boldly-me-signed-paperback">
+<div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button> <button type="button" class="btn" data-details="detail-boldly-me-signed" aria-haspopup="dialog">View details</button></div>
 </form>
 </article>
 <article class="tile shop-card span-12" id="blackops-gear">
@@ -102,7 +141,7 @@
 <h2 id="detail-slap-paperback-title">BlackOPS:SLAP – Signed paperback</h2>
 <p>A signed paperback of Book 1, shipped to the address you enter at checkout. Shipping is included in the price.</p>
 <p>Book 1 of the BlackOPS military saga by GySgt (Ret.) Sean T. Benson.</p>
-<dl class="facts"><dt>Price</dt><dd>$40, shipping included</dd><dt>Series</dt><dd>BlackOPS, Book 1</dd><dt>Release</dt><dd>October 31, 2026</dd><dt>Format</dt><dd>Signed paperback</dd><dt>ISBN</dt><dd>979-8-1828-4711-7 (print)</dd></dl>
+<dl class="facts"><dt>Price</dt><dd><span data-sku-price="slap-signed-paperback"></span>, shipping included</dd><dt>Series</dt><dd>BlackOPS, Book 1</dd><dt>Release</dt><dd>October 31, 2026</dd><dt>Format</dt><dd>Signed paperback</dd><dt>ISBN</dt><dd>979-8-1828-4711-7 (print)</dd></dl>
 <form class="cart-offer" data-cart-add data-sku="slap-signed-paperback">
 <div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button></div>
 </form>
@@ -117,7 +156,7 @@
 <h2 id="detail-slap-hardcover-title">BlackOPS:SLAP – Signed hardcover</h2>
 <p>A signed hardcover of Book 1, shipped to the address you enter at checkout. Shipping is included in the price.</p>
 <p>Book 1 of the BlackOPS military saga by GySgt (Ret.) Sean T. Benson.</p>
-<dl class="facts"><dt>Price</dt><dd>$52, shipping included</dd><dt>Series</dt><dd>BlackOPS, Book 1</dd><dt>Release</dt><dd>October 31, 2026</dd><dt>Format</dt><dd>Signed hardcover</dd><dt>ISBN</dt><dd>979-8-1828-4711-7 (print)</dd></dl>
+<dl class="facts"><dt>Price</dt><dd><span data-sku-price="slap-signed-hardcover"></span>, shipping included</dd><dt>Series</dt><dd>BlackOPS, Book 1</dd><dt>Release</dt><dd>October 31, 2026</dd><dt>Format</dt><dd>Signed hardcover</dd><dt>ISBN</dt><dd>979-8-1828-4711-7 (print)</dd></dl>
 <form class="cart-offer" data-cart-add data-sku="slap-signed-hardcover">
 <div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button></div>
 </form>
@@ -133,13 +172,47 @@
 <p class="meta">Sean T. Benson, DBA, MBA, MSITM, PMP, LSSBB, CISM · Spines, 2024 · 218 pages</p>
 <p>A signed copy by Sean T. Benson, shipped to the address you enter at checkout. Shipping is included in the price.</p>
 <p>A guide to establishing and nurturing a Project Management Office: governance, strategic alignment, continuous improvement, and adaptability, with real-world insight for project leaders.</p>
-<dl class="facts"><dt>Paperback</dt><dd>$30, shipping included<br>ISBN 9798895692653</dd><dt>Hardcover</dt><dd>$40, shipping included<br>ISBN 9798895693742</dd></dl>
+<dl class="facts"><dt>Paperback</dt><dd><span data-sku-price="pmo-book-signed-paperback"></span>, shipping included<br>ISBN 9798895692653</dd><dt>Hardcover</dt><dd><span data-sku-price="pmo-book-signed-hardcover"></span>, shipping included<br>ISBN 9798895693742</dd></dl>
 <form class="cart-offer" data-cart-add>
 <fieldset>
 <legend>Choose a format</legend>
-<label class="license-option"><input type="radio" name="detail-pmo-book-sku" value="pmo-book-signed-paperback" checked> Signed paperback — <strong>$30</strong></label>
-<label class="license-option"><input type="radio" name="detail-pmo-book-sku" value="pmo-book-signed-hardcover"> Signed hardcover — <strong>$40</strong></label>
+<label class="license-option"><input type="radio" name="detail-pmo-book-sku" value="pmo-book-signed-paperback" checked> Signed paperback — <strong data-sku-price="pmo-book-signed-paperback"></strong></label>
+<label class="license-option"><input type="radio" name="detail-pmo-book-sku" value="pmo-book-signed-hardcover"> Signed hardcover — <strong data-sku-price="pmo-book-signed-hardcover"></strong></label>
 </fieldset>
+<div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button></div>
+</form>
+</div>
+</div>
+</article>
+<article id="detail-beautifully-me-signed">
+<div class="product-dialog-layout">
+<picture>
+<source srcset="beautifully-me.webp" type="image/webp">
+<img class="cover-natural" src="beautifully-me.jpg" alt="Cover of Beautifully Me: The Girl Beyond the Mirror" width="1000" height="1293">
+</picture>
+<div>
+<p class="eyebrow">Signed paperback</p>
+<h2 id="detail-beautifully-me-signed-title">Beautifully Me: The Girl Beyond the Mirror – Signed paperback</h2>
+<p>A signed paperback, shipped to the address you enter at checkout. Shipping is included in the price.</p>
+<dl class="facts"><dt>Price</dt><dd><span data-sku-price="beautifully-me-signed-paperback"></span>, shipping included</dd><dt>Format</dt><dd>Signed paperback</dd><dt>Reading age</dt><dd>7-15</dd><dt>ISBN-13</dt><dd>979-8141707834</dd></dl>
+<form class="cart-offer" data-cart-add data-sku="beautifully-me-signed-paperback">
+<div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button></div>
+</form>
+</div>
+</div>
+</article>
+<article id="detail-boldly-me-signed">
+<div class="product-dialog-layout">
+<picture>
+<source srcset="boldly-me.webp" type="image/webp">
+<img class="cover-natural" src="boldly-me.jpg" alt="Cover of Boldly Me: The Boy Beyond the Mirror" width="1000" height="1293">
+</picture>
+<div>
+<p class="eyebrow">Signed paperback</p>
+<h2 id="detail-boldly-me-signed-title">Boldly Me: The Boy Beyond the Mirror – Signed paperback</h2>
+<p>A signed paperback, shipped to the address you enter at checkout. Shipping is included in the price.</p>
+<dl class="facts"><dt>Price</dt><dd><span data-sku-price="boldly-me-signed-paperback"></span>, shipping included</dd><dt>Format</dt><dd>Signed paperback</dd><dt>Reading age</dt><dd>7-15</dd><dt>ISBN-13</dt><dd>979-8142013118</dd></dl>
+<form class="cart-offer" data-cart-add data-sku="boldly-me-signed-paperback">
 <div class="kit-actions"><button type="submit" class="btn solid">Add to cart</button></div>
 </form>
 </div>
@@ -154,6 +227,6 @@
 <div><a href="mailto:sean@bensonpress.com">sean@bensonpress.com</a><br><a href="https://blackops-saga.com">blackops-saga.com</a><br><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br>Project management consulting: <a href="https://consulting.bensonpress.com">Benson Press Consulting</a><br>&copy; Benson Press</div></div></footer>
 <script src="site.js?v=20261116"></script>
 <script src="assets/js/gear.js?v=20261116"></script>
-<script src="assets/js/cart.js?v=20261112"></script>
+<script src="assets/js/cart.js?v=20261120"></script>
 </body>
 </html>
