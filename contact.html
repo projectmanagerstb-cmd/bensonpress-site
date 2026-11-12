@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261113">
+<link rel="stylesheet" href="styles.css?v=20261116">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,10 +31,14 @@
 <label class="nav-toggle" for="nav-check"><span class="nav-bars" aria-hidden="true"></span><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
 <nav id="site-nav" aria-label="Primary"><ul><li><a href="index.html">Home</a></li><li><a href="publishing.html">Publishing</a></li><li><a href="shop.html">Shop</a></li><li><a href="readalong.html">Read Along</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li class="nav-cart"><a href="cart.html">Cart</a></li></ul></nav><a class="cart-icon-link" href="cart.html" data-cart-link aria-label="Cart"><svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 14.75l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 20 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/></svg><span class="cart-badge" data-cart-count hidden></span></a></div></header>
 <main id="main">
-<section><div class="wrap prose">
+<section><div class="wrap">
+<header class="page-head">
 <p class="eyebrow">Contact</p>
 <h1>Get in touch</h1>
 <hr class="rule">
+</header>
+<div class="bento contact-layout">
+<article class="tile span-7">
 <p id="thanks" class="thanks" hidden>Thank you. Your message is on its way to sean@bensonpress.com.</p>
 <p>For publishing, speaking, media, and other inquiries, send a message. It is delivered to sean@bensonpress.com.</p>
 <form class="contact-form" action="https://formsubmit.co/sean@bensonpress.com" method="POST">
@@ -56,14 +60,20 @@
 <label for="message">Message<textarea id="message" name="message" required></textarea></label>
 <button class="btn solid" type="submit">Send message</button>
 </form>
+</article>
+<article class="tile span-5">
+<h2>Direct</h2>
 <p>Or email directly:</p>
 <p><a class="btn" href="mailto:sean@bensonpress.com">sean@bensonpress.com</a></p>
 <p>Readers: news and the reader roster live at <a href="https://blackops-saga.com">blackops-saga.com</a>.</p>
+<p>Project management consulting: <a href="https://consulting.bensonpress.com">Benson Press Consulting</a>.</p>
+</article>
+</div>
 </div></section>
 </main>
 <footer><div class="wrap"><div><picture class="footer-logo"><source srcset="brand/quill-lockup-600.webp?v=20261110" type="image/webp"><img src="brand/quill-lockup-600.png?v=20261110" alt="Benson Press" width="600" height="281"></picture><br>Publishing</div>
 <div><a href="mailto:sean@bensonpress.com">sean@bensonpress.com</a><br><a href="https://blackops-saga.com">blackops-saga.com</a><br><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br>Project management consulting: <a href="https://consulting.bensonpress.com">Benson Press Consulting</a><br>&copy; Benson Press</div></div></footer>
-<script src="site.js?v=20261113"></script>
+<script src="site.js?v=20261116"></script>
 <script src="assets/js/cart.js?v=20261112"></script>
 </body>
 </html>

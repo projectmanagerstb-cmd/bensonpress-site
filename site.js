@@ -94,135 +94,50 @@
 })();
 
 (function () {
-  "use strict";
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  var header = document.querySelector("header.site");
-  var headerTicking = false;
+  var dialog = document.getElementById("product-dialog");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  var slot = dialog.querySelector("[data-dialog-slot]");
+  var home = document.getElementById("detail-sources");
+  var current = null;
+  var trigger = null;
 
-  function updateHeader() {
-    if (header) header.classList.toggle("is-condensed", window.scrollY > 18);
-    headerTicking = false;
-  }
-  window.addEventListener("scroll", function () {
-    if (headerTicking) return;
-    headerTicking = true;
-    window.requestAnimationFrame(updateHeader);
-  }, { passive: true });
-  updateHeader();
-
-  var stages = document.querySelectorAll(".hero, .alt, section, .book, .shop-card.book-card");
-  if ("IntersectionObserver" in window) {
-    var pauseObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        entry.target.classList.toggle("liquid-paused", !entry.isIntersecting);
-        if (entry.target.classList.contains("hero")) {
-          entry.target.classList.toggle("liquid-on", entry.isIntersecting);
-        }
-      });
-    }, { threshold: 0.05 });
-    stages.forEach(function (el) { pauseObserver.observe(el); });
-  }
-
-  if (!reduce && "IntersectionObserver" in window) {
-    var revealNodes = document.querySelectorAll("main > section, .panel, .book, .shop-card, .featured-invite");
-    revealNodes.forEach(function (el) { el.classList.add("reveal"); });
-    var revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-in");
-        revealObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0, rootMargin: "0px 0px -8px 0px" });
-    revealNodes.forEach(function (el) { revealObserver.observe(el); });
-  }
-
-  var hero = document.querySelector(".hero");
-  if (hero && !reduce && finePointer && window.matchMedia("(min-width: 800px)").matches) {
-    var canvas = document.createElement("canvas");
-    canvas.className = "liquid-canvas";
-    canvas.setAttribute("aria-hidden", "true");
-    hero.insertBefore(canvas, hero.firstChild);
-    var ctx = canvas.getContext("2d", { alpha: true });
-    var blobs = [
-      { x: .18, y: .32, r: .28, c: "rgba(3,48,108,.85)", s: .4 },
-      { x: .72, y: .22, r: .22, c: "rgba(219,153,29,.45)", s: .55 },
-      { x: .58, y: .7, r: .2, c: "rgba(178,3,25,.28)", s: .33 },
-      { x: .4, y: .5, r: .26, c: "rgba(3,48,108,.55)", s: .25 },
-      { x: .84, y: .62, r: .16, c: "rgba(219,153,29,.22)", s: .48 }
-    ];
-    var running = false;
-    var last = 0;
-    function sizeCanvas() {
-      var rect = hero.getBoundingClientRect();
-      var dpr = Math.min(window.devicePixelRatio || 1, 1.25);
-      canvas.width = Math.max(1, Math.round(rect.width * dpr));
-      canvas.height = Math.max(1, Math.round(rect.height * dpr));
-      canvas.style.width = rect.width + "px";
-      canvas.style.height = rect.height + "px";
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-    function frame(now) {
-      if (!running || !hero.classList.contains("liquid-on")) { running = false; return; }
-      if (now - last < 33) { requestAnimationFrame(frame); return; }
-      last = now;
-      var w = hero.clientWidth;
-      var h = hero.clientHeight;
-      var t = now / 1000;
-      ctx.clearRect(0, 0, w, h);
-      blobs.forEach(function (b, i) {
-        var x = (b.x + Math.sin(t * b.s + i) * .06) * w;
-        var y = (b.y + Math.cos(t * b.s * .8 + i) * .05) * h;
-        var rad = b.r * Math.min(w, h) * (1 + Math.sin(t * .3 + i) * .06);
-        var g = ctx.createRadialGradient(x, y, rad * .1, x, y, rad);
-        g.addColorStop(0, b.c);
-        g.addColorStop(1, "rgba(0,1,16,0)");
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(x, y, rad, 0, Math.PI * 2);
-        ctx.fill();
-      });
-      requestAnimationFrame(frame);
-    }
-    function start() {
-      if (running || reduce) return;
-      running = true;
-      sizeCanvas();
-      requestAnimationFrame(frame);
-    }
-    hero.classList.add("liquid-on");
-    start();
-    window.addEventListener("resize", sizeCanvas);
-    var heroWatch = new MutationObserver(function () {
-      if (hero.classList.contains("liquid-on")) start();
-      else running = false;
-    });
-    heroWatch.observe(hero, { attributes: true, attributeFilter: ["class"] });
-
-    var glow = document.createElement("div");
-    glow.className = "hero-glow";
-    glow.setAttribute("aria-hidden", "true");
-    hero.appendChild(glow);
-    hero.addEventListener("pointermove", function (event) {
-      if (event.pointerType && event.pointerType !== "mouse") return;
-      var rect = hero.getBoundingClientRect();
-      glow.style.left = (event.clientX - rect.left) + "px";
-      glow.style.top = (event.clientY - rect.top) + "px";
-    });
+  function openFrom(button) {
+    var id = button.getAttribute("data-details");
+    var article = document.getElementById(id);
+    if (!article || !slot) return;
+    if (current && home) home.appendChild(current);
+    current = article;
+    slot.appendChild(article);
+    var title = article.querySelector("h2");
+    if (title && title.id) dialog.setAttribute("aria-labelledby", title.id);
+    trigger = button;
+    dialog.showModal();
+    var close = dialog.querySelector("[data-dialog-close]");
+    if (close) close.focus();
   }
 
   document.addEventListener("click", function (event) {
-    if (reduce) return;
-    var btn = event.target.closest(".btn");
-    if (!btn) return;
-    var rect = btn.getBoundingClientRect();
-    var ripple = document.createElement("span");
-    ripple.className = "btn-ripple";
-    var size = Math.max(rect.width, rect.height);
-    ripple.style.width = ripple.style.height = size + "px";
-    ripple.style.left = (event.clientX - rect.left - size / 2) + "px";
-    ripple.style.top = (event.clientY - rect.top - size / 2) + "px";
-    btn.appendChild(ripple);
-    window.setTimeout(function () { ripple.remove(); }, 700);
+    var button = event.target.closest("[data-details]");
+    if (!button) return;
+    event.preventDefault();
+    openFrom(button);
+  });
+
+  dialog.querySelector("[data-dialog-close]").addEventListener("click", function () {
+    dialog.close();
+  });
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", function () {
+    if (current && home) home.appendChild(current);
+    current = null;
+    if (trigger) {
+      trigger.focus();
+      trigger = null;
+    }
+  });
+  dialog.addEventListener("submit", function () {
+    if (dialog.open) dialog.close();
   });
 })();
