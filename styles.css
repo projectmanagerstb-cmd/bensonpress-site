@@ -320,6 +320,9 @@ dialog.product-dialog::backdrop,dialog.lightbox::backdrop{background:rgba(0,1,16
 .gear-step{border:1px solid var(--bp-line);background:#000110;color:var(--bp-text);font:600 .72rem/1 "Source Sans 3",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;cursor:pointer}
 .gear-step:hover,.gear-step:focus-visible{border-color:var(--bp-accent-gold);color:var(--bp-link-hover)}
 .tile-gear .gear-frame{max-height:420px}
+.book picture{display:block;max-width:280px}
+.book img.cover-natural,.tile-feature img.cover-natural,.product-dialog-layout img.cover-natural{aspect-ratio:auto;object-fit:contain;height:auto;width:100%;max-width:280px;background:#fff}
+.footer-books{display:block;margin-top:8px}
 
 @keyframes tile-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .tile{animation:tile-in .4s ease backwards}
