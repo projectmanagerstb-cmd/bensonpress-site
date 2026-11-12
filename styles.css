@@ -375,6 +375,19 @@ dialog.lightbox{border-radius:22px}
   .book img,.shop-card.book-card>img{max-width:100%}
   .feature>img{max-width:300px}
 }
+.gear-showcase{width:100%;margin:4px 0 14px}
+.gear-link{display:block;width:100%;color:inherit;text-decoration:none}
+.gear-frame{position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:#000110}
+.gear-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .7s ease}
+.gear-img.is-on{opacity:1}
+.gear-name{display:block;margin:12px 0 4px;font-weight:600;color:var(--bp-text);line-height:1.35}
+.gear-price{margin-top:4px}
+.gear-nav{display:flex;gap:8px;margin:12px 0 4px}
+.gear-step{border-radius:999px;border:1px solid var(--bp-line);background:transparent;color:var(--bp-text);font:600 .72rem/1 "Source Sans 3",sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;cursor:pointer}
+.gear-step:hover,.gear-step:focus-visible{border-color:var(--bp-accent-gold);color:var(--bp-link-hover)}
+@media(prefers-reduced-motion:reduce){
+  .gear-img{transition:none}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .hero::before,.alt::before,section::after,.book::before,.shop-card.book-card::before,.btn,.btn::before,.btn::after,.panel,.shop-card,.book,.reveal,.liquid-canvas,.hero-glow,header.site,header.site .brand-lockup img{
