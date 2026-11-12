@@ -21,7 +21,8 @@
     "publishing": "Publishing",
     "speaking": "Speaking/Events",
     "media": "Media",
-    "other": "Other"
+    "other": "Other",
+    "boldly-me": "Boldly Me"
   };
 
   function applyTopic(value) {
