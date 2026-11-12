@@ -324,7 +324,9 @@ dialog.product-dialog::backdrop,dialog.lightbox::backdrop{background:rgba(0,1,16
 .book img.cover-natural,.tile img.cover-natural,.tile-feature img.cover-natural,.product-dialog-layout img.cover-natural{aspect-ratio:auto;object-fit:contain;height:auto;width:100%;max-width:280px;background:#fff}
 .tile picture{display:block;max-width:280px}
 .footer-books{display:block;margin-top:8px}
-.hero-home{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:28px;align-items:center}
+.hero-home{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(180px,.7fr);gap:28px;align-items:center}
+.hero-mark{display:flex;align-items:center;justify-content:center;min-height:220px;background:#000110;border:1px solid var(--bp-line);border-radius:16px}
+.hero-mark img{display:block;width:min(220px,70%);height:auto}
 .cover-fan{position:relative;height:340px;width:min(100%,380px);margin-left:auto}
 .cover-fan img{position:absolute;width:168px;height:auto;border-radius:10px;box-shadow:0 16px 32px rgba(0,0,0,.45);background:#fff}
 .cover-fan img:nth-child(1){left:0;top:36px;transform:rotate(-8deg)}
