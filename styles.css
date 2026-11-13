@@ -325,6 +325,8 @@ dialog.product-dialog::backdrop,dialog.lightbox::backdrop{background:rgba(0,1,16
 .tile picture{display:block;max-width:280px}
 .footer-books{display:block;margin-top:8px}
 .hero-home{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(180px,.7fr);gap:28px;align-items:center}
+.bio-layout{display:grid;grid-template-columns:minmax(160px,240px) 1fr;gap:28px;align-items:start}
+.bio-layout>picture img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--bp-accent-gold);box-shadow:0 12px 28px rgba(0,0,0,.35)}
 .hero-mark{display:flex;align-items:center;justify-content:center;min-height:220px;background:#000110;border:1px solid var(--bp-line);border-radius:16px}
 .hero-mark img{display:block;width:min(220px,70%);height:auto}
 .cover-fan{position:relative;height:340px;width:min(100%,380px);margin-left:auto}
@@ -358,6 +360,8 @@ dialog.product-dialog::backdrop,dialog.lightbox::backdrop{background:rgba(0,1,16
 }
 @media(max-width:820px){
   .bento,.host-notes{grid-template-columns:1fr}
+  .bio-layout{grid-template-columns:1fr}
+  .bio-layout>picture{max-width:240px}
   .tile-guide{grid-template-columns:110px 1fr}
   .tile-guide>img{width:110px}
   .span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-12,.row-2{grid-column:auto;grid-row:auto}
