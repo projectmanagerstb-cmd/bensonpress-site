@@ -53,7 +53,6 @@ main.bm .hero-grid{
   align-items:center;gap:32px;padding-block:62px;
 }
 main.bm .hero-copy{position:relative;z-index:1}
-main.bm .hero-wordmark{width:min(280px,80%);margin:0 0 10px}
 main.bm .status{
   display:inline-block;border:1px solid #ad824b;border-radius:3px;
   color:var(--bm-gold-pale);font-size:.75rem;letter-spacing:.12em;
@@ -152,7 +151,6 @@ main.bm .legal-note strong{color:var(--bm-gold-pale)}
   main.bm .hero p{margin-inline:auto}
   main.bm .hero-art{width:min(100%,565px);margin-inline:auto;grid-row:1}
   main.bm .hero-copy{grid-row:2}
-  main.bm .hero-wordmark{margin-inline:auto;display:none}
   main.bm .actions{justify-content:center}
   main.bm .section-heading{grid-template-columns:1fr;gap:15px}
   main.bm .pilot-grid,main.bm .partner-layout{grid-template-columns:1fr;gap:28px}
