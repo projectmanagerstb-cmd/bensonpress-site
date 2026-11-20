@@ -47,6 +47,19 @@
   syncSubject();
   }
 
+  var interest = document.getElementById("interest");
+  if (interest) {
+    var bmSubject = document.getElementById("form-subject");
+    function syncBookMovieSubject() {
+      if (!bmSubject) return;
+      bmSubject.value = interest.value
+        ? "Benson Press BookMovie: " + interest.value
+        : "Benson Press BookMovie inquiry";
+    }
+    interest.addEventListener("change", syncBookMovieSubject);
+    syncBookMovieSubject();
+  }
+
   var dialog = document.getElementById("lightbox");
   if (!dialog || typeof dialog.showModal !== "function") return;
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-gallery-item]"));
