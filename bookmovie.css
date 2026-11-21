@@ -166,6 +166,26 @@ main.bm .partnership-pitch video{
 }
 main.bm .partnership-pitch .pitch-caption{margin:12px 0 18px;font-size:.95rem;color:var(--bm-muted)}
 main.bm .partnership-pitch .actions{justify-content:center;margin-top:0}
+
+main.bm .studio-heart{
+  padding:56px 0 52px;background:var(--bm-navy);border-bottom:1px solid var(--bm-line);
+  text-align:center;scroll-margin-top:92px;
+}
+main.bm .studio-heart h2{margin:0 0 22px;color:var(--bm-gold-pale)}
+main.bm .studio-heart .studio-statement{
+  max-width:40.5rem;margin:0 auto 28px;font-size:1.15rem;line-height:1.7;color:var(--bm-ivory);
+}
+main.bm .studio-pillars{
+  list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;margin:0;padding:0;
+}
+main.bm .studio-pillars li{
+  display:flex;align-items:center;justify-content:center;
+  min-height:74px;padding:16px 14px;border:1px solid var(--bm-line);
+  border-radius:7px;background:#0b1627;color:var(--bm-gold-pale);
+  font-size:.92rem;font-weight:600;line-height:1.35;
+}
+
 @media(max-width:850px){
   main.bm .hero-grid{grid-template-columns:1fr;text-align:center;padding-block:45px;gap:22px}
   main.bm .hero p{margin-inline:auto}
@@ -174,6 +194,8 @@ main.bm .partnership-pitch .actions{justify-content:center;margin-top:0}
   main.bm .actions{justify-content:center}
   main.bm .section-heading{grid-template-columns:1fr;gap:15px}
   main.bm .pilot-grid,main.bm .pilot-grid.reversed,main.bm .partner-layout{grid-template-columns:1fr;gap:28px}
+  main.bm .studio-heart{padding:48px 0 44px}
+  main.bm .studio-pillars{grid-template-columns:1fr 1fr}
   main.bm .pilot-grid.reversed > :first-child,main.bm .pilot-grid.reversed > :last-child{grid-column:auto;grid-row:auto}
   main.bm .steps{grid-template-columns:repeat(2,1fr)}
   main.bm .section,main.bm .join{padding:60px 0}
@@ -187,6 +209,9 @@ main.bm .partnership-pitch .actions{justify-content:center;margin-top:0}
   main.bm .feature{padding:23px}
   main.bm .section,main.bm .join{padding:45px 0}
   main.bm .format-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  main.bm .studio-heart .studio-statement{font-size:1.05rem}
+  main.bm .studio-pillars{gap:10px}
+  main.bm .studio-pillars li{min-height:64px;padding:14px 10px;font-size:.86rem}
   main.bm .actions .btn{min-width:165px}
 }
 @media(prefers-reduced-motion:reduce){
