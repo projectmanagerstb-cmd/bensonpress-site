@@ -186,6 +186,19 @@ main.bm .studio-pillars li{
   font-size:.92rem;font-weight:600;line-height:1.35;
 }
 
+
+main.bm .brand-heading{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+  column-gap:.32em;row-gap:.1em;
+}
+main.bm .brand-heading .bm-word{
+  display:inline-flex;align-items:center;line-height:0;flex:0 1 auto;max-width:100%;
+}
+main.bm .brand-heading .bm-word img{
+  display:block;height:1.15em;width:auto;max-width:min(100%,17.5em);
+}
+main.bm .brand-heading .brand-rest{color:inherit}
+
 @media(max-width:850px){
   main.bm .hero-grid{grid-template-columns:1fr;text-align:center;padding-block:45px;gap:22px}
   main.bm .hero p{margin-inline:auto}
